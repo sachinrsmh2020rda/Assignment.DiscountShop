@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Assignment.DiscountShop.Models\Assignment.DiscountShop.Models.csproj" />
+  </ItemGroup>
+
 </Project>
