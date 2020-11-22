@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.DiscountShop", "Assignment.DiscountShop\Assignment.DiscountShop.csproj", "{368065A8-2C69-49A1-BC1B-B628445F88E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment.DiscountShop", "Assignment.DiscountShop\Assignment.DiscountShop.csproj", "{368065A8-2C69-49A1-BC1B-B628445F88E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLibraries", "BusinessLibraries", "{5D79F580-80EB-42CD-B6B5-8CD84653D4FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonUtilities", "CommonUtilities", "{F6C526F5-E8DB-4E54-9FD3-1E238533FC03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{3405778C-3263-45BC-96C7-F38641827F66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.DiscountShop.Tests", "Assignment.DiscountShop.Tests\Assignment.DiscountShop.Tests.csproj", "{EBE1BEE9-E850-40FA-8FB5-C122635ADC55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.DiscountShop.Contracts", "Assignment.DiscountShop.Contracts\Assignment.DiscountShop.Contracts.csproj", "{045C6A75-3881-41F4-99DB-F588CB4D325A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.DiscountShop.DiscountShopService", "Assignment.DiscountShop.DiscountShopService\Assignment.DiscountShop.DiscountShopService.csproj", "{CF5B2153-921F-4B7E-BCE3-65ED5EC6D8BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.DiscountShop.Models", "Assignment.DiscountShop.Models\Assignment.DiscountShop.Models.csproj", "{F5ED6BF1-4ABE-4B72-A844-46D215D2FAAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.DiscountShop.Utilities", "Assignment.DiscountShop.Utilities\Assignment.DiscountShop.Utilities.csproj", "{6FB01D61-86EE-4B2D-A8F1-71EA4C32D534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment.DiscountShop.TaxCalculator", "Assignment.DiscountShop.TaxCalculator\Assignment.DiscountShop.TaxCalculator.csproj", "{46194DD6-ED6F-40AA-9D60-50B46B84FA4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +33,41 @@ Global
 		{368065A8-2C69-49A1-BC1B-B628445F88E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{368065A8-2C69-49A1-BC1B-B628445F88E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{368065A8-2C69-49A1-BC1B-B628445F88E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE1BEE9-E850-40FA-8FB5-C122635ADC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE1BEE9-E850-40FA-8FB5-C122635ADC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE1BEE9-E850-40FA-8FB5-C122635ADC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE1BEE9-E850-40FA-8FB5-C122635ADC55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{045C6A75-3881-41F4-99DB-F588CB4D325A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045C6A75-3881-41F4-99DB-F588CB4D325A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045C6A75-3881-41F4-99DB-F588CB4D325A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045C6A75-3881-41F4-99DB-F588CB4D325A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF5B2153-921F-4B7E-BCE3-65ED5EC6D8BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5B2153-921F-4B7E-BCE3-65ED5EC6D8BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5B2153-921F-4B7E-BCE3-65ED5EC6D8BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5B2153-921F-4B7E-BCE3-65ED5EC6D8BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5ED6BF1-4ABE-4B72-A844-46D215D2FAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5ED6BF1-4ABE-4B72-A844-46D215D2FAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5ED6BF1-4ABE-4B72-A844-46D215D2FAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5ED6BF1-4ABE-4B72-A844-46D215D2FAAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB01D61-86EE-4B2D-A8F1-71EA4C32D534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB01D61-86EE-4B2D-A8F1-71EA4C32D534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB01D61-86EE-4B2D-A8F1-71EA4C32D534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB01D61-86EE-4B2D-A8F1-71EA4C32D534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46194DD6-ED6F-40AA-9D60-50B46B84FA4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46194DD6-ED6F-40AA-9D60-50B46B84FA4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46194DD6-ED6F-40AA-9D60-50B46B84FA4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46194DD6-ED6F-40AA-9D60-50B46B84FA4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBE1BEE9-E850-40FA-8FB5-C122635ADC55} = {3405778C-3263-45BC-96C7-F38641827F66}
+		{045C6A75-3881-41F4-99DB-F588CB4D325A} = {5D79F580-80EB-42CD-B6B5-8CD84653D4FA}
+		{CF5B2153-921F-4B7E-BCE3-65ED5EC6D8BD} = {5D79F580-80EB-42CD-B6B5-8CD84653D4FA}
+		{F5ED6BF1-4ABE-4B72-A844-46D215D2FAAB} = {5D79F580-80EB-42CD-B6B5-8CD84653D4FA}
+		{6FB01D61-86EE-4B2D-A8F1-71EA4C32D534} = {F6C526F5-E8DB-4E54-9FD3-1E238533FC03}
+		{46194DD6-ED6F-40AA-9D60-50B46B84FA4A} = {F6C526F5-E8DB-4E54-9FD3-1E238533FC03}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC81B58A-7E06-402F-93E2-3260740F217C}
