@@ -12,6 +12,7 @@ namespace Assignment.DiscountShop.Models
             CartItems = new List<KeyValuePair<Product, int>>();
             DiscountsApplied = new List<KeyValuePair<Discount, decimal>>();
             TotalDiscountAmount = 0;
+            TaxAmount = 0;
         }
 
         public int Id { get; set; }
@@ -21,6 +22,8 @@ namespace Assignment.DiscountShop.Models
 
         public decimal TotalBillAmount { get; set; }
         public decimal TotalDiscountAmount { get; set; }
+
+        public decimal TaxAmount { get; set; }
 
         public ShoppingCart Clone()
         {

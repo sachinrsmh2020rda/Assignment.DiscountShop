@@ -7,25 +7,35 @@ using System.Text;
 
 namespace Assignment.DiscountShop.DiscountShopService
 {
-    class TaxCalculatorService : ITaxService
+    public class TaxCalculatorService : ITaxService
     {
         private ITaxCalculator _taxCalculator;
+        private string _state;
+        public TaxCalculatorService(string state="")
+        {
+            _state = state;
+            _taxCalculator = null;
+        }
 
-        private TaxCalculatorService(ITaxCalculator taxCalculator)
+        public TaxCalculatorService(ITaxCalculator taxCalculator)
         {
             _taxCalculator = taxCalculator;
         }
         public void CalculateTax(ShoppingCart shoppingCart)
         {
+            if (_taxCalculator == null)
+            {
+                //First set the _taxCalulator
+                CreateTaxCalculator(_state);
+            }
+            
             _taxCalculator.CalculateTax(shoppingCart);
         }
 
-        public ITaxService CreateTaxCalculator(string state = "")
+        public void CreateTaxCalculator(string state = "")
         {
+            _state = state;
             //This is mapper function, where you can create the actual Tax Class required for the specific State.
-            
-            ITaxService serviceObject;
-
             //We can have a Tax Admin module which can map the concreate tax class with store and store it in a DB.
             //Here you can use Dictionaly and populate the mapping from DB.
             //Dictionary<String, ITaxCalculator> objTaxCalculatorRepo =
@@ -33,21 +43,19 @@ namespace Assignment.DiscountShop.DiscountShopService
             //objTaxCalculatorRepo.Add()
 
             //But for the current demo, I am just using If condition.
-            if ( state == "")
+            if ( _state == "")
             {
-                serviceObject = new TaxCalculatorService(new BasicTaxCalculator());
+                _taxCalculator = new BasicTaxCalculator();
             }
-            if (state == "FL" || state == "NM" || state == "NV" )
+            if (_state == "FL" || _state == "NM" || _state == "NV" )
             {
-                serviceObject = new TaxCalculatorService(new PreDiscountTaxCalculator());
-            }
-
-            if (state == "IO")  // Let's say Iowa has Item wise tax
-            {
-                serviceObject = new TaxCalculatorService(new ItemWiseTaxCalculator());
+                _taxCalculator = new PreDiscountTaxCalculator();
             }
 
-            throw new NotImplementedException();
+            if (_state == "IO")  // Let's say Iowa has Item wise tax
+            {
+                _taxCalculator = new ItemWiseTaxCalculator();
+            }
         }
     }
 }

@@ -64,6 +64,7 @@ namespace Assignment.DiscountShop.DiscountShopService
 
         public ShoppingCart Checkout(ShoppingCart shoppingCart)
         {
+            //Here we can write the code to save the cart in DB and process furter.
             throw new NotImplementedException();
         }
 
