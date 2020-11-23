@@ -4,9 +4,9 @@ This is a Test Repo created for "RDA LAB" test
 
 Few assumptions
 
-1. Shopping Cart represnts an Order, it is collection of Products and it's Qty.
+1. Shopping Cart represnts an Order, it is a collection of Products and it's Qty. It has  Total Amount, Discount Amount and Tax Amountfiels as well.
 
-2. Currently we are using keyValuePair, it can be easily created a new Model. i.e CartItem.
+2. Currently I am using KeyValuePair, it can be easily created a new Model. i.e CartItem.
 
 2. Two types of discounts
    a. Single Item with N qty can have fixed amount deductions. ( 3 qty of product "A", $20 can be deducted right away. It can be linked with some Coupon code.)
