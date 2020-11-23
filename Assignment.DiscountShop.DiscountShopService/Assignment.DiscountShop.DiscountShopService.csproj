@@ -5,8 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Assignment.DiscountShop.Contracts\Assignment.DiscountShop.Contracts.csproj" />
     <ProjectReference Include="..\Assignment.DiscountShop.Models\Assignment.DiscountShop.Models.csproj" />
+    <ProjectReference Include="..\Assignment.DiscountShop.TaxCalculator\Assignment.DiscountShop.TaxCalculator.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,8 +2,9 @@
 
 namespace Assignment.DiscountShop.Contracts
 {
-    interface ITaxService
+    public interface ITaxService
     {
+        ITaxService CreateTaxCalculator(string state = "");
         void CalculateTax(ShoppingCart shoppingCart);
     }
 }
